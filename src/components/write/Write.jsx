@@ -26,14 +26,14 @@ const Write = () => {
             data.append("file", file);
             newPost.photo = filename;
             try {
-                await axios.post('/upload', data)
+                await axios.post('https://morning-brook-96378.herokuapp.com/api/upload', data)
 
             } catch (error) {
                 console.log(error);
             }
         }
         try {
-            const res = await axios.post('/post/', newPost);
+            const res = await axios.post('https://morning-brook-96378.herokuapp.com/api/post/', newPost);
 
             res.data && window.location.replace('/post/' + res.data._id);
         } catch (error) {

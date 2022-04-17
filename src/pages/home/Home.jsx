@@ -13,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get(`/post/${search}`);
+            const res = await axios.get(`https://morning-brook-96378.herokuapp.com/api/post/${search}`);
             setPosts(res.data);
         };
         fetchPosts();

@@ -10,7 +10,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         const fetchCats = async () => {
-            const res = await axios.get('/categories');
+            const res = await axios.get('https://morning-brook-96378.herokuapp.com/api/categories');
             setCats(res.data);
         };
         fetchCats();

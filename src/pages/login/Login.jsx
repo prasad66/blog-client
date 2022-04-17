@@ -24,7 +24,7 @@ const Login = () => {
 
         dispatch({ type: "LOGIN_START" });
         try {
-            const res = await axios.post('/auth/login', {
+            const res = await axios.post('https://morning-brook-96378.herokuapp.com/api/auth/login', {
                 username: userRef.current.value,
                 password: passwordRef.current.value
             });

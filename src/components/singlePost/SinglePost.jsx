@@ -19,7 +19,7 @@ const SinglePost = () => {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get(`/post/${path}`);
+            const res = await axios.get(`https://morning-brook-96378.herokuapp.com/api/post/${path}`);
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -29,7 +29,7 @@ const SinglePost = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`/post/${path}`, {
+            await axios.delete(`https://morning-brook-96378.herokuapp.com/api/post/${path}`, {
                 data: {
                     username: user.username
                 }
