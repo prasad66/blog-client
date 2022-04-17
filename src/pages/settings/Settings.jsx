@@ -13,7 +13,7 @@ const Settings = () => {
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
 
-    const PF = 'http://localhost:3000/images/';
+    const PF = 'https://morning-brook-96378.herokuapp.com/images/';
 
     const handleSubmit = async (e) => {
         e.preventDefault();

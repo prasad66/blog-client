@@ -10,7 +10,7 @@ const SinglePost = () => {
 
     const location = useLocation();
     const path = location.pathname.split('/')[2];
-    const PF = "http://localhost:3000/images/";
+    const PF = "https://morning-brook-96378.herokuapp.com/images/";
 
     const [post, setPost] = useState({});
     const [title, setTitle] = useState("");

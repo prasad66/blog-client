@@ -6,6 +6,8 @@ import './Topbar.css'
 const Topbar = () => {
     const { user, dispatch } = useContext(Context);
 
+    console.log(user)
+
     const handleLogout = () => {
         dispatch({ type: 'LOGOUT' });
     }
@@ -47,7 +49,7 @@ const Topbar = () => {
                             <Link to='/settings'>
                                 {
 
-                                    user?.profilePic !== null ?
+                                    user?.profilePic !== '' ?
                                         <img
                                             className="topImage"
                                             src={user.profilePic}
@@ -56,7 +58,7 @@ const Topbar = () => {
                                         :
                                         <img
                                             className="topImage"
-                                            src="../../images/profile.jpg"
+                                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
                                             alt="profile"
                                         />
                                 }
